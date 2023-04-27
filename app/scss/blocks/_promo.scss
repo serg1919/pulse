@@ -1,0 +1,9 @@
+/*! ============= Promo ============== */
+.promo {
+  @include adaptiv-value('min-height', 650, 450, 0);
+  padding: 21px 0 93px 0;
+  background: url(../images/bg.webp) no-repeat center center/cover;
+  &__page {
+    @include adaptiv-value('margin-bottom', 65, 25, 0);
+  }
+}

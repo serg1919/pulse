@@ -1,0 +1,22 @@
+/*! ============= Advice ============== */
+.advice {
+  @include adaptiv-value('padding-top', 100, 25, 0);
+  @include adaptiv-value('padding-bottom', 100, 30, 0);
+  background: url(../images/form-bg.webp) no-repeat center (center/cover);
+  &__page {
+    @include adaptiv-value('margin-bottom', 58, 25, 0);
+  }
+  &__title {
+    max-width: 70%;
+    margin-bottom: 0.34em;
+    line-height: 1.5;
+    color: var(--white-color);
+  }
+  &__subtitle {
+    max-width: 50%;
+    margin-bottom: 1.8em;
+    @include adaptiv-value('font-size', 20, 16, 0);
+    font-weight: 500;
+    color: var(--white-color);
+  }
+}

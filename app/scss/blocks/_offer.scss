@@ -1,0 +1,88 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &__title {
+    margin-bottom: 0.36em;
+    padding-top: 2.15em;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+  &__subtitle {
+    @include adaptiv-value('margin-bottom', 60, 25, 0);
+    @include adaptiv-value('font-size', 24, 16, 0);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiv-value('margin-bottom', 65, 25, 0);
+    color: var(--white-color);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: center;
+    max-width: 136px;
+    min-height: 100px;
+    @include adaptiv-value('margin-right', 40, 10, 0);
+    text-align: center;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item::before {
+    content: '';
+    @include adaptiv-value('width', 45, 25, 0);
+    @include adaptiv-value('height', 45, 25, 0);
+    margin-bottom: 1.43em;
+  }
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  &__btn {
+    margin-bottom: 0.5em;
+    font-size: 1.15rem;
+  }
+  &__link {
+    position: relative;
+    padding-bottom: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color);
+    span {
+      margin-right: 5px;
+      text-transform: lowercase;
+      color: var(--white-color);
+    }
+  }
+  &__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 1px;
+    background-color: var(--white-color);
+  }
+}
+.offer__item-time::before {
+  background: url(../images/icons/019_timer_time_stopwatch_2-64.webp) no-repeat center (center/contain);
+}
+.offer__item-app::before {
+  background: url(../images/icons/app-08-hand-cart-64.webp) no-repeat center (center/contain);
+}
+.offer__item-mess::before {
+  background: url(../images/icons/messages-64.webp) no-repeat center (center/contain);
+}

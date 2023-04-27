@@ -1,0 +1,48 @@
+/*! ============= Progress ============== */
+.progress {
+  @include adaptiv-value('padding-bottom', 36, 22, 0);
+  @include adaptiv-value('margin-bottom', 32, 0, 0);
+  &__title {
+    @include adaptiv-value('margin-bottom', 62, 20, 0);
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include adaptiv-value('gap', 65, 20, 0);
+    text-align: center;
+  }
+}
+.item-progress {
+  flex: 0 1 270px;
+  min-height: 200px;
+  color: var(--dark-color);
+  &__title {
+    margin-bottom: 1.12em;
+  }
+  &__text {
+    span {
+      text-transform: uppercase;
+      color: var(--accent-color);
+    }
+  }
+  &::before {
+    content: '';
+    display: block;
+    @include adaptiv-value('width', 70, 50, 0);
+    @include adaptiv-value('height', 70, 50, 0);
+    margin: 0 auto;
+    @include adaptiv-value('margin-bottom', 30, 15, 0);
+  }
+  &_one::before {
+    background: url(../images/icons/cup.webp) no-repeat center (center/cover);
+  }
+  &_two::before {
+    background: url(../images/icons/heart.webp) no-repeat center (center/cover);
+  }
+  &_three::before {
+    background: url(../images/icons/shoe.webp) no-repeat center (center/cover);
+  }
+}

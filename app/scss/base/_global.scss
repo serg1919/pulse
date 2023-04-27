@@ -1,0 +1,150 @@
+/*! ============= Global ============== */
+:root {
+  --grey-color: #555;
+  --tabs-color: #d0d0d0;
+  --white-color: #fff;
+  --dark-color: #0d0d0d;
+  --bg-color: #f6f6f6;
+  --accent-color: #c70101;
+  --hr-color: #e8e8e8;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-family: 'Museo', 'Roboto', 'Arial', sans-serif;
+  font-weight: 300;
+  color: var(--grey-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.xlg-title {
+  @include adaptiv-value('font-size', 43, 24, 0);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+
+.lg-title {
+  @include adaptiv-value('font-size', 30, 20, 0);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+
+.md-title {
+  @include adaptiv-value('font-size', 18, 16, 0);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.sm-title {
+  font-size: 1.143rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+hr {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  &__img {
+    width: 100%;
+  }
+}
+.btn {
+  padding: 0.75em 1.5em;
+  border-radius: 0.42em;
+  text-transform: uppercase;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  row-gap: 15px;
+  &__item {
+    height: 50px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  &__btn {
+    margin-top: 10px;
+    padding: 22px 0 22px 0;
+  }
+}

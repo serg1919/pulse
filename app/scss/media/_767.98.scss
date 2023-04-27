@@ -1,0 +1,15 @@
+@media  (max-width: 767.98px) {
+  .header__oficial {
+    display: none;
+  }
+  .offer__title,
+  .offer__subtitle {
+    text-align: center;
+  }
+  .advice__title {
+    max-width: 100%;
+  }
+  .advice__subtitle {
+    max-width: 60%;
+  }
+}
