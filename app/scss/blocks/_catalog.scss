@@ -17,9 +17,11 @@
     @include adaptiv-value('margin-bottom', 60, 25, 0);
   }
   &__tab {
-    padding: 0.83em 3.05em;
+    width: 220px;
+    padding: 0.83em 0.25em;
     border: 2px solid var(--tabs-color);
     font-size: 1.29rem;
+    text-align: center;
     text-transform: uppercase;
     transform: skewX(-25deg);
     cursor: pointer;
@@ -38,11 +40,14 @@
     }
   }
   &__content {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1.42em;
+    &_active {
+      display: flex;
+    }
   }
 }
 .catalog-item {
@@ -54,12 +59,55 @@
   border: 2px solid var(--hr-color);
   text-align: center;
   transition: box-shadow 0.3s ease, border .3s ease;
+  overflow: hidden;
   &:hover {
       border: 2px solid transparent;
       box-shadow: 1px 1px 15px var(--grey-color);
     }
+  &__wrap {
+    display: flex;
+    width: calc(200% + 54px);
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 0;
+    transform: translateX(-110%);
+    transition: transform 0.3s ease;
+    &_active {
+      transform: translateX(0);
+      margin-right: 27px;
+    }
+  }
+  &__list {
+    position: relative;
+    width: 50%;
+    margin-left: 27px;
+    padding-right: 27px;
+    text-align: start;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    &_active {
+      transform: translateX(-100%);
+      margin-left: 0;
+      padding-left: 14px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    li:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: -14px;
+      width: 5px;
+      height: 5px;
+      background-color: var(--accent-color);
+    }
+  }
   &__img {
-    flex: 0 1 140px;
+    max-width: 100%;
     max-height: 150px;
     object-fit: cover;
     margin: 0 auto;
@@ -73,13 +121,29 @@
     text-align: left;
   }
   &__link {
-    display: inline-flex;
+    // position: absolute;
+    // bottom: 95px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    display: block;
     width: max-content;
-    margin: auto auto 1.21rem auto;
+    margin: auto auto 1.07em auto;
     border-bottom: 1px solid var(--accent-color);
     font-weight: 500;
     color: var(--accent-color);
     text-transform: uppercase;
+  }
+  &__back {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50% - 15px);
+    display: block;
+    width: max-content;
+    border-bottom: 1px solid var(--accent-color);
+    text-transform: uppercase;
+    color: var(--accent-color);
+
   }
   & hr {
     margin-bottom: 1.43rem;
