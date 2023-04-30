@@ -37,20 +37,15 @@ $(window).on('load', function () {
         e.preventDefault();
         $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
         $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+
+        if ($('.catalog-item__list').eq(i).hasClass('catalog-item__list_active')) {
+          $(this).text('Назад');
+        } else {
+          $(this).text('Детальніше');
+        }
       })
     });
 
 
-});
+  });
 
-
-  // if ($('.catalog-item__list').eq(i).hasClass('catalog-item__list_active')) {
-  //   $(this).eq(i).text('Назад');
-  // } else {
-  //   $(this).eq(i).text('Детальніше');
-  // }
-
-
-  // $('.catalog-item__list_active').prop('value', 'Назад');
-// $(i) = element.textContent.replace('Детальніше', 'Назад');
-// toggleSlide('.catalog-item__back');
