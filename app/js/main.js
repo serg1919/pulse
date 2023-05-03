@@ -31,18 +31,21 @@ $(window).on('load', function () {
 
 
 
-  function toggleSlide(item) {
-    $(item).each(function (i) {
+
+  $('.catalog-item__link').each(function (i) {
       $(this).on('click', function (e) {
         e.preventDefault();
         $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
         $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
 
+        if ($('.catalog-item__list').eq(i).hasClass('catalog-item__list_active')) {
+          $(this).text('Назад');
+        } else {
+          $(this).text('Детальніше');
+        }
       })
-    })
-  };
+    });
 
-  toggleSlide('.catalog-item__link');
-  toggleSlide('.catalog-item__back');
 
-});
+  });
+
