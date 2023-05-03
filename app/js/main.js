@@ -30,7 +30,7 @@ $(window).on('load', function () {
   });
 
 
-
+  // Переключение контента табов и кнопки детальніше - назад
 
   $('.catalog-item__link').each(function (i) {
       $(this).on('click', function (e) {
@@ -48,4 +48,3 @@ $(window).on('load', function () {
 
 
   });
-
