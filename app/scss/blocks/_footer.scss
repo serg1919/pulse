@@ -17,7 +17,6 @@
     row-gap: 36px;
     max-width: max-content;
     min-height: 270px;
-    // padding: 0 54px;
     @include adaptiv-value('padding-left', 54, 15, 0);
     @include adaptiv-value('padding-right', 54, 15, 0);
     background-color: var(--accent-color);
@@ -45,7 +44,7 @@
     border-radius: 100%;
     transition: border .3s ease;
     &:hover {
-      border: 2px solid transparent;
+      border: 2px solid var(--white-hover-color);
     }
   }
   &__link {
