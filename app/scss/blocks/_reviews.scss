@@ -20,11 +20,10 @@
     margin-bottom: 0;
   }
   &-img {
-    @include adaptiv-value('max-width', 190, 140, 1);
-    @include adaptiv-value(' min-height', 190, 140, 1);
+    @include adaptiv-value('max-width', 170, 140, 1);
+    @include adaptiv-value(' min-height', 170, 140, 1);
     object-fit: cover;
     border-radius: 100%;
-    @include adaptiv-value('margin-bottom', 30, 20, 1);
   }
   &-content {
     @include adaptiv-value('max-width', 680, 290, 1);
