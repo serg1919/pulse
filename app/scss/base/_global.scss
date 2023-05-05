@@ -153,3 +153,10 @@ hr {
     padding: 22px 0 22px 0;
   }
 }
+.phone-link {
+    display: block;
+    margin-bottom: 4px;
+    @include adaptiv-value('font-size', 18, 16, 1);
+    font-weight: 500;
+    color: #fff;
+  }

@@ -19,12 +19,6 @@
   &__phone {
     text-align: end;
   }
-  &__phone-link {
-    display: block;
-    margin-bottom: 4px;
-    @include adaptiv-value('font-size', 18, 16, 1);
-    font-weight: 500;
-  }
   &__btn {
     font-size: 0.857rem;
   }
