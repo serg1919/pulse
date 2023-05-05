@@ -3,9 +3,11 @@
   --grey-color: #555;
   --tabs-color: #d0d0d0;
   --white-color: #fff;
+  --white-hover-color: #ffffffaa;
   --dark-color: #0d0d0d;
   --bg-color: #f6f6f6;
   --accent-color: #c70101;
+  --accent-hover-color: #8d2525;
   --hr-color: #e8e8e8;
   --span-color: #646464;
 }
@@ -131,10 +133,18 @@ hr {
 }
 .btn {
   padding: 0.75em 1.5em;
+  border: 2px solid transparent;
   border-radius: 0.42em;
   text-transform: uppercase;
   background-color: var(--accent-color);
   color: var(--white-color);
+  transition: color .3s ease;
+  &:hover {
+    background-color: var(--accent-hover-color);
+  }
+  &:focus {
+    border: 2px solid var(--dark-color);
+  }
 }
 .modal-box {
   display: flex;
@@ -158,5 +168,9 @@ hr {
     margin-bottom: 4px;
     @include adaptiv-value('font-size', 18, 16, 1);
     font-weight: 500;
-    color: #fff;
+    color: var(--white-color);
+    transition: color .3s ease;
+    &:hover {
+      color: var(--white-hover-color);
+    }
   }
