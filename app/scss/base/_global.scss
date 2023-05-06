@@ -12,19 +12,16 @@
   --hr-color: #e8e8e8;
   --span-color: #646464;
 }
-
-html {
-  height: 100%;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 body {
   height: 100%;
   font-family: 'Museo', 'Roboto', 'Arial', sans-serif;

@@ -1,15 +1,16 @@
 .overlay {
   position: fixed;
-  top: 0;
   display: none;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, .56);
 }
+
 .modal {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @include adaptiv-value('width', 380, 230, 1);
   @include adaptiv-value('min-height', 400, 350, 1);
   @include adaptiv-value('padding', 40, 15, 1);

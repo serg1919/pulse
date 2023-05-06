@@ -51,7 +51,7 @@
     display: none;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.42rem;
+    gap: 1rem;
     &_active {
       display: flex;
     }
@@ -60,7 +60,7 @@
 .catalog-item {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 303px;
   min-height: 440px;
   padding: 20px 27px;
   border: 2px solid var(--hr-color);
@@ -168,7 +168,7 @@
     text-decoration: line-through;
   }
   &__price {
-    @include adaptiv-value('font-size', 20, 18, 0);
+    @include adaptiv-value('font-size', 18, 16, 0);
     font-weight: 700;
     color: var(--dark-color);
   }
