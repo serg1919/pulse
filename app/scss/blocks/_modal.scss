@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .56);
+}
+.modal {
+  position: relative;
+  @include adaptiv-value('width', 380, 230, 1);
+  @include adaptiv-value('min-height', 400, 350, 1);
+  @include adaptiv-value('padding', 40, 15, 1);
+  border-radius: 5px;
+  background-color: var(--modal-bg-color);
+  text-align: center;
+  &__close {
+    position: absolute;
+    top: -5px;
+    right: -35px;
+    padding: 5px;
+    font-size: 1.43rem;
+    line-height: 1;
+    color: var(--accent-color);
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: 26px;
+    font-weight: 700;
+    color: #0d0d0d;
+  }
+  &_mini {
+    min-height: 140px;
+    .modal__subtitle {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#consultation,
+#order,
+#thanks {
+  display: none;
+}

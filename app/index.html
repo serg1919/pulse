@@ -72,15 +72,15 @@
     </section>
     <section class="advice advice__page">
       <div class="container">
-        <h2 class="lg-title advice__title">Получите бесплатную консультацию по подбору пульсометра</h2>
+        <h2 class="lg-title advice__title">Отримайте безкоштовну консультацію щодо підбору пульсометра</h2>
         <p class="advice__subtitle">
-          Просто заполните форму заявки и мы перезвоним вам в течении 10 минут
+          Просто заповніть форму заявки і ми передзвонимо вам протягом 10 хвилин
         </p>
         <form class="modal-box" action="#">
-          <input class="modal-box__item" name="name" type="text" placeholder="Ваше имя">
+          <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
           <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
           <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
-          <button class="btn modal-box__btn">Заказать консультацию</button>
+          <button class="btn modal-box__btn">Замовити консультацію</button>
         </form>
       </div>
     </section>
@@ -413,6 +413,36 @@
       </ul>
     </div>
   </footer>
+
+  <div class="overlay">
+    <div class="modal" id="consultation">
+      <button class="modal__close" type="button">&times;</button>
+      <h2 class="md-title modal__title">Просто заповніть форму заявки</h2>
+      <span class="modal__subtitle">і ми передзвонимо вам протягом 10 хвилин</span>
+      <form class="modal-box" action="#">
+        <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
+        <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
+        <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
+        <button class="btn modal-box__btn">Замовити консультацію</button>
+      </form>
+    </div>
+    <div class="modal" id="order">
+      <button class="modal__close" type="button">&times;</button>
+      <h2 class="md-title modal__title">Ваше замовлення:</h2>
+      <span class="modal__subtitle">Пульсометр Polar FT1</span>
+      <form class="modal-box" action="#">
+        <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
+        <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
+        <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
+        <button class="btn modal-box__btn">Придбати</button>
+      </form>
+    </div>
+    <div class="modal modal_mini" id="thanks">
+      <button class="modal__close" type="button">&times;</button>
+      <h2 class="md-title modal__title">Дякуємо за вашу заявку!</h2>
+      <span class="modal__subtitle">Наш менеджер зв'яжеться з вами найближчим часом!</span>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
