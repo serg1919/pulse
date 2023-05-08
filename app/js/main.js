@@ -107,6 +107,8 @@ $(window).on('load', function () {
       data: $(this).serialize()
     }).done(function () {
       $(this).find('input').val('');
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thinks').fadeIn('slow');
 
       $('form').trigger('reset');
     });
