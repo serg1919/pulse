@@ -4,8 +4,8 @@ const concat            = require('gulp-concat');
 const browserSync       = require('browser-sync').create();
 const uglify            = require('gulp-uglify-es').default;
 const autoprefixer      = require('gulp-autoprefixer');
-const del               = import('del');
-const imagemin          = import ('gulp-imagemin');
+const del               = require('del');
+const imagemin          = require('gulp-imagemin');
 
 
 
@@ -61,10 +61,6 @@ function browsersync () {
   });
 }
 
-function cleanDist() {
-  return del('dist');
-}
-
 function build() {
   return src([
     'app/*.html',
@@ -73,6 +69,10 @@ function build() {
     'app/fonts/**/*'
   ], {base: 'app'} )
     .pipe(dest('dist'));
+}
+
+function cleanDist() {
+  return del('dist');
 }
 
 function watching() {
