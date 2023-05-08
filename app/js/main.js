@@ -1,4 +1,5 @@
 "use strict"
+/*! ==================== Main ================== */
 
 // Slick slider
 
@@ -63,5 +64,30 @@ $(window).on('load', function () {
       $('.overlay, #order').fadeIn('slow');
     })
   });
+
+  function valideForms(form) {
+    $(form).validate({
+      rules: {
+        name: 'required',
+        tel: 'required',
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Будь ласка, вкажіть своє ім'я",
+        tel: "Вкажить свій номер телефона",
+        email: {
+          required: "Нам потрібна ваша електронна адреса, щоб зв'язатися з вами",
+          email: "Ваша електронна адреса має бути у форматі name@domain.com"
+        }
+      }
+    });
+  };
+
+  valideForms('#consultation-form');
+  valideForms('#consultation form');
+  valideForms('#order form');
 
 });

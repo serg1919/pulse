@@ -76,10 +76,10 @@
         <p class="advice__subtitle">
           Просто заповніть форму заявки і ми передзвонимо вам протягом 10 хвилин
         </p>
-        <form class="modal-box" action="#">
-          <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
-          <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
-          <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
+        <form id="consultation-form" class="modal-box" action="#">
+          <input class="modal-box__item" required name="name" type="text" placeholder="Ваше ім'я">
+          <input class="modal-box__item" required name="tel" type="tel" placeholder="Ваш телефон">
+          <input class="modal-box__item" required name="email" type="email" placeholder="Ваш E-mail">
           <button class="btn modal-box__btn">Замовити консультацію</button>
         </form>
       </div>
@@ -415,7 +415,7 @@
       <span class="modal__subtitle">і ми передзвонимо вам протягом 10 хвилин</span>
       <form class="modal-box" action="#">
         <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
-        <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
+        <input class="modal-box__item" name="tel" type="tel" placeholder="Ваш телефон">
         <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
         <button class="btn modal-box__btn">Замовити консультацію</button>
       </form>
@@ -425,9 +425,9 @@
       <h2 class="md-title modal__title">Ваше замовлення:</h2>
       <span class="modal__subtitle">Пульсометр Polar FT1</span>
       <form class="modal-box" action="#">
-        <input class="modal-box__item" name="name" type="text" placeholder="Ваше ім'я">
-        <input class="modal-box__item" name="phone" type="tel" placeholder="Ваш телефон">
-        <input class="modal-box__item" name="email" type="email" placeholder="Ваш E-mail">
+        <input class="modal-box__item" required name="name" type="text" placeholder="Ваше ім'я">
+        <input class="modal-box__item" required name="tel" type="tel" placeholder="Ваш телефон">
+        <input class="modal-box__item" required name="email" type="email" placeholder="Ваш E-mail">
         <button class="btn modal-box__btn">Придбати</button>
       </form>
     </div>
@@ -438,8 +438,7 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

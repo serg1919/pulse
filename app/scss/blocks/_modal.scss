@@ -43,8 +43,24 @@
   }
 }
 
+.modal-box {
+  .error {
+    border: 1px solid var(--accent-color);
+    text-align: center;
+  }
+  label.error {
+    border: 1px solid transparent;
+    color: var(--accent-color);
+  }
+}
+
 #consultation,
 #order,
 #thanks {
   display: none;
+}
+#consultation-form.modal-box {
+  label {
+    color: var(--white-color);
+  }
 }
