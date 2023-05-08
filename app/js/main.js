@@ -65,6 +65,8 @@ $(window).on('load', function () {
     })
   });
 
+  //  Modal validation
+
   function valideForms(form) {
     $(form).validate({
       rules: {
@@ -89,5 +91,8 @@ $(window).on('load', function () {
   valideForms('#consultation-form');
   valideForms('#consultation form');
   valideForms('#order form');
+
+  $('input[name=tel]').mask('+380(99) 999-99-99');
+
 
 });
