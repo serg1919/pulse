@@ -97,6 +97,7 @@ $(window).on('load', function () {
 
   $('form').submit(function (e) {
     e.preventDefault();
+
     if (!$(this).valid()) {
       return;
     }
