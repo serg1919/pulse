@@ -116,5 +116,24 @@ $(window).on('load', function () {
     return false;
   });
 
+  // Smooth scroll and scroll up
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1000) {
+      $('.scrollup').fadeIn();
+    } else {
+      $('.scrollup').fadeOut();
+    }
+  });
+
+  $("a[href*='#']").on("click", function (e) {
+    const anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+      scrollTop: $(anchor).offset().top
+    }, 800);
+    e.preventDefault();
+    return false;
+  });
+
 
 });
